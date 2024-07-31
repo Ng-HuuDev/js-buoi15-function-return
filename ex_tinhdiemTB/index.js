@@ -29,28 +29,34 @@
 // Cach 2: su dung function return
 
 function tinhDiemTong() {
-  // tinh diem khoi A
+  // tinh diem TB khoi A
+
   var diemToan = Number(document.getElementById("diemToan").value);
   var diemLy = Number(document.getElementById("diemLy").value);
   var diemHoa = Number(document.getElementById("diemHoa").value);
 
-  var diemTBKA = tinhDiemTB(diemToan, diemLy, diemHoa);
+  var diemTBKA = tinhDiemTB(diemToan, diemHoa, diemLy);
 
-  // hien thi ra giao dien ben ngoai
-  document.getElementById("result1").innerHTML = diemTBKA;
+  // xuat ket qua ra ngoai man hinh
 
-  // tinh diem khoi C
+  document.getElementById("result1").innerHTML = `Diem TB: ${diemTBKA}`;
+
+  // Tinh diem TB Khoi C
+
   var diemVan = Number(document.getElementById("diemVan").value);
   var diemSu = Number(document.getElementById("diemSu").value);
   var diemDia = Number(document.getElementById("diemDia").value);
 
   var diemTBKC = tinhDiemTB(diemVan, diemSu, diemDia);
 
-  document.getElementById("result2").innerHTML = diemTBKC;
+  // xuat ket qua ra ngoai man hinh
+
+  document.getElementById("result2").innerHTML = `Diem TB: ${diemTBKC}`;
 }
 
 function tinhDiemTB(diem1, diem2, diem3) {
   var dtb = 0;
   dtb = (diem1 + diem2 + diem3) / 3;
+
   return dtb;
 }
